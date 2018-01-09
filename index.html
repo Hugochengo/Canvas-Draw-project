@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paint App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet" type='text/css'>
+</head>
+
+<body>
+
+    <section id="banner">
+        <header class="mainlogo">
+
+            <!-- <div class="col-lg-12 text center"> -->
+
+            <h3 class="main-text logo-spark">
+                <span class="C">C</span>
+                <span class="A">A</span>
+                <span class="N">N</span>
+                <span class="V">V</span>
+                <span class="A">A</span>
+                <span class="S">S</span>
+
+                &nbsp;
+                <span class="a1">D</span>
+                <span class="a2">R</span>
+                <span class="a3">A</span>
+                <span class="a4">W</span>
+            </h3>
+        </header>
+
+
+
+    </section>
+    </div>
+
+    <!-- button and function part -->
+
+    <div class=".col-md-3">
+        <div class="tools">
+            <div class="buttons">
+
+
+                <span class="btn btn-success" id="drawing-line" data-toggle="collapse" data-target="#lineSize">
+                    <i class="material-icons">brush</i>
+                </span>
+
+                <span class="btn btn-success" id="straight-line" data-toggle="collapse" data-target="#straightlineSize">
+                    <i class="material-icons">remove</i>
+                </span>
+
+                <span class="btn btn-info" id="drawing-wormline" data-toggle="collapse" data-target="#wormlineSize">
+                    <i class="material-icons">call_split</i>
+                </span>
+
+                <span class="btn btn-info" id="drawing-circle">
+                    <i class="material-icons">copyright</i>
+                </span>
+
+                <span class="btn btn-warning" id="drawing-rectangle">
+                    <i class="material-icons">crop_square</i>
+                </span>
+
+                <span class="btn btn-warning" id="drawing-rectangle-outline">
+                    <i class="material-icons">border_style</i>
+                </span>
+
+                <span class="btn btn-danger" id="eraser" data-toggle="collapse" data-target="#eraseSize">
+                    <i class="material-icons">close</i>
+                </span>
+
+                <span class="btn btn-secondary" id="clear" style="width:95%">
+                    <i class="material-icons">pan_tool</i>
+                </span>
+
+
+                <div class="uploadImage">
+                    <div style="padding:0" class="btn btn-secondary" onclick="uploadImage()">
+                        <img class="img-responsive" src="img/imageupload.png">
+                    </div>
+                </div>
+
+                <input type="file" id="uploadFile" style="display:none" accept="images/*">
+            </div>
+
+            
+
+
+
+
+            <!--- Colorweel and Brush Size -->
+            <input type="color" value="#000000" id="colorWell">
+
+            <hr>
+            <hr>
+            <div id="lineSize" class="collapse text-white">
+                <p>
+                    <small>Brush Size</small>
+                </p>
+                <input type="range" min="1" max="20" value="1" step="any">
+            </div>
+
+            <div id="wormlineSize" class="collapse text-white">
+                <p>
+                    <small>Sqare Line Size</small>
+                </p>
+                <input type="range" min="1" max="20" value="1" step="any">
+            </div>
+
+            <div id="eraseSize" class="collapse text-white">
+                <p>
+                    <small>Eraser</small>
+                </p>
+                <input type="range" min="1" max="20" value="1" step="any">
+            </div>
+
+            <div id="straightlineSize" class="collapse text-white">
+                <p>
+                    <small>Straight Line</small>
+                </p>
+                <input type="range" min="1" max="20" value="1" step="any">
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+
+    <!--Canvas Part -->
+    
+    <div class=".col-md-9">
+        <div class="holder">
+            <div id="canvas-container">
+                <canvas id="canvas-real" class="canvas"></canvas>
+                <canvas id="canvas-draft" class="canvas"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script> crossorigin="anonymous">
+    </script>
+    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+
+    <!---mother js folder -->
+
+    <script type='text/javascript' src="js/canvas-common.js"></script>
+
+    <!--- functional js folder-->
+
+    <script type='text/javascript' src="js/drawing-line.js"></script>
+    <script type='text/javascript' src="js/drawing-rectangle.js"></script>
+    <script type='text/javascript' src="js/rectangle-outline.js"></script>
+    <script type='text/javascript' src="js/color-picker.js"></script>
+    <script type='text/javascript' src="js/erase.js"></script>
+    <script type='text/javascript' src="js/draw-straight-line.js"></script>
+    <script type='text/javascript' src="js/draw-circle.js"></script>
+    <script type='text/javascript' src="js/zoomin.js"></script>
+    <script type='text/javascript' src="js/drawing-wormline.js"></script>
+    <script type='text/javascript'>
+
+
+        $(function () {
+
+            // hide set value icons
+            $('.buttons').click(() => {
+
+                $('.collapse').collapse('hide');
+            })
+
+            $('#drawing-rectangle-outline').click(() => {
+                currentFunction = new DrawingRectangleOutline(contextReal, contextDraft);
+            });
+            $('#drawing-rectangle').click(() => {
+                currentFunction = new DrawingRectangle(contextReal, contextDraft);
+            });
+            $('#drawing-line').click(() => {
+                currentFunction = new DrawingLine(contextReal, contextDraft);
+            });
+            $('#drawing-wormline').click(() => {
+                currentFunction = new DrawingWormLine(contextReal, contextDraft);
+            });
+            $('#straight-line').click(() => {
+                currentFunction = new DrawStraightLine(contextReal, contextDraft);
+            });
+
+            $('#drawing-circle').click(() => {
+                currentFunction = new DrawCircle(contextReal, contextDraft);
+            });
+
+            $('#eraser').click(() => {
+                currentFunction = new Eraser(contextReal);
+            });
+            currentFunction = new DrawingRectangle(contextReal, contextDraft);
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+}
+.canvas{
+    border:2px rgb(102, 93, 93) solid;
+    position:absolute;
+    bottom: 0px;
+    right:0%;
+    width: 81%;
+    height: 83%;    
+}
+
+hr {
+    opacity: 0;
+}
+
+p {
+font-size:  'Orbitron', sans-serif;
+}
+
+.tools {
+  
+    background: #464646;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 19%;
+    height: 83%;
+    margin-right: 60px;
+    padding: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.allthefuckingfunction {
+margin-bottom: 40px;
+
+}
+
+
+/*.row {
+background: #464646;
+}*/
+
+
+
+#uploadFile {
+    position: absolute;
+    padding: 10px;
+    bottom: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    
+}
+#clear {
+    position: absolute;
+    width: 99%;
+    left:1px;
+    right:1px;
+    bottom: 1px;
+    
+   
+}
+#canvas-draft{
+    background-color: transparent;
+}
+
+
+.size {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/*          button modify      */
+.btn {
+    margin: 5px;
+    cursor: pointer;
+    
+    }
+
+.btn-info {
+    color: #fff;
+    background-color:#21fc66;
+    border-color: #21fc66;
+}
+
+.btn-success {
+background-color:#00AAFF;
+border-color:#00AAFF;
+}
+
+.btn-warning {
+background: #fddd53;
+border-color: #fddd53;
+}
+
+.btn-danger {
+ background: #8853fd; 
+ border-color: #8853fd; 
+}
+
+.btn-primary {
+background: #98c502;
+border-color:#98c502;
+}
+
+.btn-secondary {
+background:#fd5373;
+border-color: #fd5373;
+}
+
+
+/* colorpicker styles */
+.colorpicker {
+    background-color: #222222;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 2px 2px #444444;
+    color: #FFFFFF;
+    font-size: 12px;
+    position: absolute;
+    width: 460px;
+    z-index: 2;
+}
+#picker {
+    cursor: crosshair;
+    float: left;
+    margin: 10px;
+    border: 0;
+}
+.controls {
+    float: right;
+    margin: 10px;
+}
+.controls > div {
+    border: 1px solid #2F2F2F;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding: 5px;
+}
+.controls label {
+    float: left;
+}
+.controls > div input {
+    background-color: #121212;
+    border: 1px solid #2F2F2F;
+    color: #fff;
+    float: right;
+    font-size: 10px;
+    height: 14px;
+    margin-left: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 75px;
+}
+.preview {
+    background: url("./select.png") repeat scroll center center transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    background-color:#000;
+    border:1px solid #4da0cf;
+}
+h3.main-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    text-transform: none!important;
+    color: #ff4162;
+  
+    
+    font-weight: bold !important;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-top: 60px;
+    background: #464646;
+    
+
+    
+}
+
+#banner{
+   width: 100%;
+   padding-top: 15px;
+   padding-bottom: 8px;
+   text-align: center;
+   background: #464646;
+   position: fixed;
+    
+}
+
+img {
+height: 44px;
+width: 50px;
+}
+
+
+
+@media screen {
+
+}
+/* end of color picker */
+
+.logo-spark span {
+    -webkit-animation-name: flash-letter;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1200ms;
+    -webkit-animation-duration: 1.6s;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: none;
+    transition: all 600ms ease-out 400ms;
+    }
+    
+    .logo-spark .C {
+    -webkit-animation-delay: 0;
+    }
+    
+    .logo-spark .A {
+    -webkit-animation-delay: 30ms;
+    }
+    
+    .logo-spark .N {
+    -webkit-animation-delay: 50ms;
+    }
+    
+    .logo-spark .V {
+    -webkit-animation-delay: 100ms;
+    }
+    
+    .logo-spark .A {
+    -webkit-animation-delay: 150ms;
+    }
+
+    .logo-spark .S {
+        -webkit-animation-delay: 190ms;
+        }
+    
+    
+    .logo-spark .a1 {
+    -webkit-animation-delay: 250ms;
+    }
+    
+    .logo-spark .a2 {
+    -webkit-animation-delay: 300ms;
+    }
+    
+    .logo-spark .a3 {
+    -webkit-animation-delay: 350ms;
+    }
+    
+    .logo-spark .a4 {
+    -webkit-animation-delay: 400ms;
+    }
+     
+    .logo-spark span {
+      opacity: 0.30;
+      letter-spacing: 0.09rem;
+    }
+    
+    
+    @-webkit-keyframes flash-letter {
+        0% {
+            opacity: 0.35;
+        }
+    
+        30% {
+            opacity: 0.9;
+        }
+    
+        40% {
+            opacity: 0.5;
+        }
+    
+        100% {
+            opacity: 0.31;
+        }
+    }
+    
+    input[type="color" i] {
+        border-radius: 5px;
+        width: 50px;
+        height: 44px;
+        border-width: 1.5px;
+        margin: 5px;
+        
+        }
